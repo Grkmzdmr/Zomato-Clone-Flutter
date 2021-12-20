@@ -138,7 +138,6 @@ class _DetailsPageState extends State<DetailsPage> {
                                         MaterialPageRoute(
                                             builder: (context) =>
                                                 PhotoPage(photos)));
-                                    
                                   },
                                   child: Container(
                                       height: 150,
@@ -161,15 +160,20 @@ class _DetailsPageState extends State<DetailsPage> {
               thickness: 0.5,
               color: Colors.black,
             ),
-            
             Container(
-              height: 100,
-              width: 100,
-              decoration : BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/images/gmp.png")
-                )
-              )
+                height: 100,
+                width: 100,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("assets/images/gmp.png")))),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: Text(
+                "Tıkla Keşfet",
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
             )
           ],
         ),
@@ -251,6 +255,4 @@ class _DetailsPageState extends State<DetailsPage> {
           return alertDialog;
         });
   }
-
- 
 }
