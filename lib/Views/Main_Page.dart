@@ -92,11 +92,12 @@ class _MainPageState extends State<MainPage> {
                               padding: const EdgeInsets.only(left: 0, top: 150),
                               child: Padding(
                                 padding:
-                                    const EdgeInsets.only(top: 150, left: 20),
+                                    const EdgeInsets.only(top: 0, left: 20),
                                 child: Padding(
                                   padding: const EdgeInsets.only(right: 130,left: 02),
                                   child: Column(
                                     children: [
+                                      SizedBox(height: 160,),
                                       Container(
                                         width: 200,
                                         child: Text(
