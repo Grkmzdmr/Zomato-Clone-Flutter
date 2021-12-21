@@ -118,7 +118,7 @@ class _DetailsPageState extends State<DetailsPage> {
               color: Colors.black,
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 320, top: 10),
+              padding: const EdgeInsets.only(right: 280, top: 10),
               child: Text("Fotoğraflar"),
             ),
             SizedBox(

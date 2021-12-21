@@ -13,6 +13,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  
   late Future<List<Info?>> veri;
   String url =
       "https://raw.githubusercontent.com/Grkmzdmr/json_map/master/lib/assets/data/zomato.json";
@@ -36,6 +37,7 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(80.0), // here the desired height
@@ -56,6 +58,8 @@ class _MainPageState extends State<MainPage> {
   }
 
   BodyList() {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Container(
       child: FutureBuilder(
         builder: (context, AsyncSnapshot<List<Info?>> snapshot) {
@@ -79,7 +83,7 @@ class _MainPageState extends State<MainPage> {
                       child: Stack(
                         children: [
                           Container(
-                            height: MediaQuery.of(context).size.height - 300,
+                            height: MediaQuery.of(context).size.height / 2 + 90,
                             width: MediaQuery.of(context).size.width - 20,
                             decoration: BoxDecoration(
                                 color: Colors.white,
@@ -88,13 +92,13 @@ class _MainPageState extends State<MainPage> {
                               padding: const EdgeInsets.only(left: 0, top: 150),
                               child: Padding(
                                 padding:
-                                    const EdgeInsets.only(top: 200, left: 20),
+                                    const EdgeInsets.only(top: 150, left: 20),
                                 child: Padding(
-                                  padding: const EdgeInsets.only(right: 230),
+                                  padding: const EdgeInsets.only(right: 130,left: 02),
                                   child: Column(
                                     children: [
                                       Container(
-                                        width: 180,
+                                        width: 200,
                                         child: Text(
                                           snapshot.data![index]!.name
                                               .toString(),
@@ -119,7 +123,7 @@ class _MainPageState extends State<MainPage> {
                             ),
                           ),
                           Container(
-                            height: MediaQuery.of(context).size.height - 400,
+                            height: MediaQuery.of(context).size.height / 2 - 50,
                             width: MediaQuery.of(context).size.width - 20,
                             decoration: BoxDecoration(
                               borderRadius:
